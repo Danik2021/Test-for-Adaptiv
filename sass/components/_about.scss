@@ -1,80 +1,72 @@
 // About
 
 .about__list {
-  display: flex;
-  justify-content: space-between;
-  @media screen and (max-width: 767px) {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     gap: 30px 0;
-    padding: 0 15px;
 
     li {
-      text-align: left;
+        text-align: left;
     }
 
-    h3 {
-      text-align: left;
-    }
-  }
+    @media screen and (min-width: 767px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 30px 30px;
+        padding: 0 15px;
 
-  @media screen and (max-width: 1199px) {
-    flex-wrap: wrap;
-    gap: 30px 30px;
-    li {
-      text-align: left;
+        h3 {
+            text-align: left;
+        }
     }
 
-    h3 {
-      text-align: center;
+    @media screen and (min-width: 1199px) {
+        justify-content: space-between;
+        gap: 0px;
     }
-  }
 }
 
 .about__list h3 {
-  color: #212121;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 10px;
+    @extend %basik-text;
+    color: $title-text-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .about__list p {
-  color: #757575;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+    color: #757575;
+    @extend %basik-text;
+    font-weight: 400;
+    letter-spacing: $main-letter-spacing;
 }
 
 .about__list li {
-  @media screen and (min-width: 480px) {
-    width: 100%;
-  }
+    @media screen and (min-width: 480px) {
+        width: 100%;
+    }
 
-  @media screen and (min-width: 768px) {
-    width: calc(50% - 15px);
-  }
+    @media screen and (min-width: 768px) {
+        width: calc(50% - 15px);
+    }
 
-  @media screen and (min-width: 1199px) {
-    max-width: 270px;
-    text-align: left;
-  }
+    @media screen and (min-width: 1199px) {
+        max-width: 270px;
+        text-align: left;
+    }
 }
 
 .about__icon {
-  text-align: center;
-  background-color: #f5f4fa;
-  padding: 25px 100px;
-  margin-bottom: 30px;
-  img {
-    display: inline-block;
-  }
+    text-align: center;
+    background-color: #f5f4fa;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    img {
+        display: inline-block;
+    }
 
-  @media screen and (min-width: 1199px) {
-    max-width: 270px;
-    max-height: 120px;
-  }
+    @media screen and (min-width: 1199px) {
+        max-width: 270px;
+        max-height: 120px;
+    }
 }

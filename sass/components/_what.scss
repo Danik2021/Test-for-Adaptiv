@@ -1,35 +1,32 @@
 /* Section our-works */
 .what-section {
-  @media screen and (max-width: 1599px) {
-    display: none;
-  }
-  display: block;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+    display: block;
 }
 
 .what__img-works {
-  display: flex;
-  margin: 0px;
-  padding: 0px;
-  justify-content: space-between;
+    display: flex;
+    @extend %normalize;
+    justify-content: space-between;
 }
 
 .what__img-works li {
-  position: relative;
-  max-height: 294px;
+    position: relative;
+    max-height: 294px;
 }
 
 .what__label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(47, 48, 58, 0.8);
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $button-color;
-  font-size: $secondary-font-size;
+    @extend %main-flexbox;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $button-color;
+    font-size: $secondary-font-size;
 }
